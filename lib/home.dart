@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'page/dashboard.dart';
-import 'page/chat.dart';
+import 'page/myMoney.dart';
+import 'page/expensesIncomes.dart';
 import 'page/profile.dart';
 import 'page/settings.dart';
 
@@ -17,14 +17,14 @@ class _HomeState extends State<Home> {
   int currentTab = 0;
   int counter = 0;
   final List<Widget> screens = [
-    Dashboard(),
-    Chat(),
+    MyMoney(),
+    ExpensesIncomes(),
     Profile(),
     Settings()
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = Dashboard();
+  Widget currentScreen = MyMoney();
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
                     minWidth: 40,
                     onPressed: (){
                       setState((){
-                        currentScreen =Dashboard();
+                        currentScreen =MyMoney();
                         currentTab = 0;
                       });
                     },
@@ -64,13 +64,8 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                          Icons.dashboard,
+                          Icons.account_balance_wallet,
                           color: currentTab == 0 ? Colors.blue :Colors.grey,
-                        ),
-                        Text('Dashboard',
-                          style:  TextStyle(
-                              color: currentTab == 0 ? Colors.blue :Colors.grey
-                          ),
                         ),
                       ],
                     ),
@@ -79,7 +74,7 @@ class _HomeState extends State<Home> {
                     minWidth: 40,
                     onPressed: (){
                       setState((){
-                        currentScreen =Chat();
+                        currentScreen =ExpensesIncomes();
                         currentTab = 1;
                       });
                     },
@@ -87,13 +82,8 @@ class _HomeState extends State<Home> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
-                          Icons.chat,
+                          Icons.dashboard_customize,
                           color: currentTab == 1 ? Colors.blue :Colors.grey,
-                        ),
-                        Text('Chat',
-                          style:  TextStyle(
-                              color: currentTab == 1 ? Colors.blue :Colors.grey
-                          ),
                         ),
                       ],
                     ),
