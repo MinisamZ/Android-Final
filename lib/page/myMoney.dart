@@ -12,8 +12,10 @@ class _MyMoneyState extends State<MyMoney> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My money'),
-        backgroundColor: Colors.red,
+        title: Text('My money',
+        style: TextStyle(color: Colors.black),),
+        backgroundColor: Colors.white,
+        shadowColor: Colors.white,
       ),
       body: Center(
         child: Text ('My money screen', style: TextStyle(fontSize: 40)),

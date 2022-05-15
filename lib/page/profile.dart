@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
-  const Profile({Key? key}) : super(key: key);
+class Instruments extends StatefulWidget {
+  const Instruments({Key? key}) : super(key: key);
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<Instruments> createState() => _InstrumentsState();
 }
 
-class _ProfileState extends State<Profile> {
+class _InstrumentsState extends State<Instruments> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile'),
+        title: Text('Instruments'),
+        backgroundColor: Colors.amber,
+        shadowColor: Colors.white,
       ),
       body: Center(
-        child: Text ('Profile screen', style: TextStyle(fontSize: 40)),
+        child: Text ('Instruments screen', style: TextStyle(fontSize: 40)),
       ),
     );
   }

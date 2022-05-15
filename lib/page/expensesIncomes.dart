@@ -13,10 +13,15 @@ class _ExpensesIncomesState extends State<ExpensesIncomes> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Expenses/Incomes'),
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.indigo,
+        shadowColor: Colors.white,
       ),
       body: Center(
-        child: Text ('Expenses/Incomes screen', style: TextStyle(fontSize: 40)),
+        child: Text (
+          'Expenses\nIncomes\nscreen',
+          style: TextStyle(fontSize: 40),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }
